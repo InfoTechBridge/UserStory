@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Amir Arayeshi</Authors>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <Copyright>Copyright © Amir Arayeshi</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+  </ItemGroup>
+
+</Project>
