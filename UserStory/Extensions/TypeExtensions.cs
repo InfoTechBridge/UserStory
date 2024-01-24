@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace UserStory.Extensions
 {
-    public static class ScenarioExtensions
+    public static class TypeExtensions
     {
+        public static Story<T> Story<T>(this T testObject, string title = null, string id = null, string description = null, string asA = null, string iWantTo = null, string soThatICan = null, bool continueOnFailed = false) where T : class
+        {
+            return new Story<T>(testObject, title, id, description, asA, iWantTo, soThatICan, continueOnFailed);
+        }
+
         public static Scenario<T> Scenario<T>(this T testObject, string title = null, string id = null, bool continueOnFailed = false) where T : class
         {
             return new Scenario<T>(testObject, title, id, continueOnFailed);
